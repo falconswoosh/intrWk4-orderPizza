@@ -22,9 +22,10 @@ This website is our forth project for the Introduction to Programming. A site fo
 ## Specifications    
 | Behavior | Input | Output |
 |---|---|---|
-| a customer can choose to order a certain size pizza. | small, large, etc. | small, large, etc. |
-| a customer may select individual toppings. | cheese, pepperoni, etc. | cheese, pepperoni, etc. |
-| a customer may finalize their selections at checkout where a cost will display. | final cost $9.99 | final cost $9.99|
+| may choose a type of pizza |  original, pan, stuffed, etc. | original, pan, stuffed, etc. |
+| may choose to order a certain size pizza | small, large, etc. | small, large, etc. |
+| may select individual toppings. | may select individual toppings  | cheese, pepperoni, etc. |
+| may finalize their selections where cost displays and allows for checkout | final cost $9.99 | final cost $9.99|
 
 
 
