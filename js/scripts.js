@@ -35,7 +35,7 @@ $(function() {
     event.preventDefault();
     var pizzaType = $("select#selectType").val();
     var pizzaSize = $("select#selectSize").val();
-    var pizzaToppings = $("input#checkbox[name=toppings]:checked").val();
+    var pizzaToppings = $("input:checkbox[name=toppings]:checked").val();
 
       $("div#output").show();
   		// $("ul#list").append("<li>"+outputArray[index]+"</li>");
