@@ -6,7 +6,7 @@
 
 ## Description
 
-This website is our forth project for the Introduction to Programming. The site for ordering pizza.
+This website is our forth project for the Introduction to Programming. A site for ordering pizza.
 
 ## Setup/Installation Requirements
 
@@ -22,14 +22,10 @@ This website is our forth project for the Introduction to Programming. The site 
 ## Specifications    
 | Behavior | Input | Output |
 |---|---|---|
-| It can count up to the provided number. | 1 | [1,2] |
-| Accepts a number input from the user. | 2<br />1 | [1,2]<br />1 |
-| Display on screen 1 to the number chosen. | 4<br />1 | [1, 2, ping, 4]<br />[1]|
-| Exception: display on screen "ping" replacing numbers divisible by 3 | 6 | ping |
-| Exception: display on screen "pong" replacing numbers divisible by 5 | 10 | pong |
-| Exception: display on screen "ping-pong" replacing numbers divisible by 15 | 30 | ping-pong |
-|A user should be able to enter a new number and see new results over and over again. | 2<br />4<br />15 | [1,2]<br />[1,2,ping,4]<br />[1,2,ping,4,pong,ping,7,8,ping,pong,11,ping,13,14,ping-pong] |
-|Ability to clear previous output| click | display area is cleared |
+| a customer can choose to order a certain size pizza. | small, large, etc. | small, large, etc. |
+| a customer may select individual toppings. | cheese, pepperoni, etc. | cheese, pepperoni, etc. |
+| a customer may finalize their selections at checkout where a cost will display. | final cost $9.99 | final cost $9.99|
+
 
 
 ## Known Bugs
