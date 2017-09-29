@@ -31,7 +31,7 @@ function Payment (payment) {
 Price.prototype.priceCalc = function () {
     this.type = new (pizzaType);
 
-      for (index=0; index<)
+      // for (index=0; index<)
 };
 
 

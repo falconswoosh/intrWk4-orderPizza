@@ -10,8 +10,8 @@ This website is our forth project for the Introduction to Programming. A site fo
 
 ## Setup/Installation Requirements
 
-* You may view this project at: https://falconswoosh.github.io/intrWk3-pingPong/
-* This project may be cloned from:  https://github.com/falconswoosh/intrWk3-pingPong.git
+* You may view this project at: https://falconswoosh.github.io/intrWk4-orderPizza/
+* This project may be cloned from:  https://github.com/falconswoosh/intrWk4-orderPizza.git
 * Clone to your local system
 * Open the project folder "intrWk3-pingPong"
 * Open the index.html in your browser to execute its contents
