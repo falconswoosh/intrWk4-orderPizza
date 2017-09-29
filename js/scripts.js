@@ -21,9 +21,10 @@ function Customer (Name) {
 }
 
 function Payment (payment) {
-  this.credit = ["Visa", "Mastercard", "Debit"]
+  this.credit = ["Visa", "Mastercard", "Debit"];
   this.cash   = false;
 }
+
 //User Interface
 $(function() {
   $("form").submit(function(event) {
@@ -32,7 +33,7 @@ $(function() {
       $("div#output").show();
   		$("ul#list").append("<li>"+outputArray[index]+"</li>");
   		// $("#output").text("<span>"+outputArray[index]+"</span>");
-    }
+
 //Diplay 'error' only if number is <= 0 or a whole number
     $(".help-inline").text(validNumberCheck(number));
     $(".help-inline").css("background-color", "cyan");

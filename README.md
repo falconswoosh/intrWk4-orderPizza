@@ -24,7 +24,7 @@ This website is our forth project for the Introduction to Programming. A site fo
 |---|---|---|
 | may choose a type of pizza with default as original |  original | original |
 | may choose to order a certain size pizza with default as medium  | medium | medium |
-| may select individual toppings | cheese, pepperoni  | cheese, pepperoni |
+| may select individual toppings. Default is cheese | cheese | cheese |
 | may finalize their selections where cost displays and allows for checkout | final cost $9.99 | final cost $9.99|
 
 
