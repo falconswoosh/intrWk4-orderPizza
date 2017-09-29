@@ -7,7 +7,10 @@
     <meta name="author" content="Alan Falcon">
     <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
     <link rel="stylesheet" href="css/styles.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/dropdownCheckboxes.min.css" type="text/css" media="all">
     <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/dropdownCheckboxes.min.js"></script>
     <script src="js/scripts.js"></script>
     <title>Order Pizza</title>
   </head>
@@ -51,10 +54,10 @@
             </div>
           </div>   <!--end of row1col2 -->
           <div class="col-md-4" id="col3-Toppings"> <!--Col3-->
-            <div id="toppingsInput" class="form-group">
+            <div id="toppingsInput" class="dropdown-check-list" tabindex"100">
               <form id="toppings">
               <label class="control-label" for="toppings">Toppings</label>
-                <select class="form-control" name="toppings">
+                <!-- <select class="form-control" name="toppings">
                   <option value="Cheese">Cheese</option>
                   <option value="Pepperoni">Pepperoni</option>
                   <option value="Italian Sausage">Italian Sausage</option>
@@ -64,7 +67,8 @@
                   <option value="Bacon">Bacon</option>
                   <option value="Pineapple">Pineapple</option>
                 </select>
-            <span class="help-block">Please select toppings</span>
+            <span class="help-block">Please select toppings</span> -->
+            <input type="checkbox" id = "toppings" name="toppings">
             </form>
           </div>   <!--end of row1col3 -->
     <br>
@@ -83,7 +87,7 @@
       </form>
     <br>
     <br>
-      <div id="output">
+      <div class = "col-md-12" id="output">
         <ul id="list1">
           <li></li>
         </ul>
