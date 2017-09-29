@@ -12,28 +12,59 @@
     <title>Order Pizza</title>
   </head>
   <body>
+    <div class="page">
+    </div>
     <div class="container">
       <h1>Welcome to ePizza!</h1>
       <h6>*Our pizzas are so good that seeing just the pictures online makes your mouth water..."</h6>
       <br>
       <br>
       <div class="row1">
-        <div class="col-md-4" id="col1-PizzaType">
-          <form id="type">
-          <label for="input1">Type of pizza</label>
-          <input id="input1" type="text" name="" value="">Choose one
-          </form>
+        <div class="col-md-4" id="col1-PizzaType"> <!--Col1-->
+          <div id="typeInput" class="form-group">
+            <form id="type">
+            <label class="control-label" for="type">Type of pizza</label>
+              <select class="form-control" name="type">
+                <option value="Original">Original</option>
+                <option value="Pan">Pan</option>
+                <option value="Original-stuffed">Original-stuffed</option>
+                <option value="Pan-stuffed">Pan-stuffed</option>
+              <option value="ThinNcrispy">ThinNcrispy</option>
+            </select>
+            <span class="help-block">Please select type of pizza</span>
+            <!-- <label class="control-label" for="typeInput">Type of pizza</label>
+            <input id="typeInput" type="text" name="" value="">Choose one -->
+            </form>
+          </div>   <!--end of DIV typeInput -->
         </div>   <!--end of row1col1 -->
         <div class="col-md-4" id="col2-PizzaSize">
-          <form id="size">
-          <label for="input2">Size of pizza</label>
-          <input id="input2" type="text" name="" value="">Choose one
+          <div id="sizeInput" class="form-group">
+            <form id="size">
+          <select class="form-control" name="size">
+            <option value="Small">Small</option>
+            <option value="Medium">Medium</option>
+            <option value="Large">Large</option>
+            <option value="Super-large">Super-large</option>
+          </select>
+          <span class="help-block">Please select a size</span>
+          <!-- <label for="input2">Size of pizza</label>
+          <input id="input2" type="text" name="" value="">Choose one -->
           </form>
+          </div>
         </div>   <!--end of row1col2 -->
         <div class="col-md-4" id="col2-Toppings">
+          <div id="toppingsInput" class="form-group">
+            <form id="toppings">
+          <!-- <input id="input3" type="text" name="" value="">Choose one -->
+          <select class="form-control" name="toppings">
+            <option value="Small">Small</option>
+            <option value="Medium">Medium</option>
+            <option value="Large">Large</option>
+            <option value="Super-large">Super-large</option>
+          </select>
+          <span class="help-block">Please select a size</span>
           <form id="toppings">
           <label for="input3">Toppings on pizza</label>
-          <input id="input3" type="text" name="" value="">Choose one
           </form>
         </div>   <!--end of row1col3 -->
         <br>

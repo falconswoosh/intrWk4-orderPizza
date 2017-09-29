@@ -1,7 +1,7 @@
 //Business Interface
 function Pizza (order) {
-  this.type = ["original", "pan", "original-stuffed","pan-stuffed", "thinNcrispy"];
-  this.size = ["small", "medium", "large", "super-large"];
+  this.type = ["Original", "Pan", "Original-stuffed","Pan-stuffed", "ThinNcrispy"];
+  this.size = ["Small", "Medium", "Large", "Super-large"];
   this.toppings = ["Cheese", "Pepperoni", "Italian Sausage", "Salami", "Meatball", "Ham", "Bacon", "Pineapple"];
 }
 
