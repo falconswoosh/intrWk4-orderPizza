@@ -35,13 +35,23 @@ $(function() {
     event.preventDefault();
     var pizzaType = $("select#selectType").val();
     var pizzaSize = $("select#selectSize").val();
-    var pizzaToppings = $("input:checkbox[name=toppings]:checked").val();
+    var toppingsResponse = [];
+    // var toppingChoices = [];
+    // $("input:checkbox[name=toppings]:checked").each(function() {
+    //     var toppingChoices = $(this).val();
+    //     toppingsResponse.push(toppingChoices);
+    // });
 
       $("div#output").show();
-  		// $("ul#list").append("<li>"+outputArray[index]+"</li>");
   		$("ul#list1").append("<li>"+pizzaType+"</li>");
       $("ul#list1").append("<li>"+pizzaSize+"</li>");
-      $("ul#list1").append("<li>"+pizzaToppings+"</li>");
+	    // for (var index=0; index<toppingChoices.length;index++) {
+  		//     $("ul#list1").append("<li>"+toppingChoices[index]+"</li>");
+      // }
+      $("input:checkbox[name=toppings]:checked").each(function() {
+          var toppingChoices = $(this).val();
+            $("ul#list1").append("<li>"+toppingChoices+"</li>");
+      });
 
 //Diplay 'error' only if number is <= 0 or a whole number
     // $(".help-inline").text(validNumberCheck(number));
