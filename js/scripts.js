@@ -29,7 +29,7 @@ function Payment (payment) {
 $(function() {
   $("form").submit(function(event) {
     event.preventDefault();
-
+    $('.cq-dropdown').dropdownCheckboxes();
       $("div#output").show();
   		$("ul#list").append("<li>"+outputArray[index]+"</li>");
   		// $("#output").text("<span>"+outputArray[index]+"</span>");
