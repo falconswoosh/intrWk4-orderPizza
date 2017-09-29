@@ -6,8 +6,10 @@
     <meta name="keywords" content="Order Pizza">
     <meta name="author" content="Alan Falcon">
     <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css" type="text/css" media="all">
     <link rel="stylesheet" href="css/styles.css" type="text/css" media="all">
     <script src="js/jquery-3.2.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <script src="js/scripts.js"></script>
     <title>Order Pizza</title>
   </head>
@@ -26,11 +28,11 @@
               <form id="type">
               <label class="control-label" for="type">Type of pizza</label>
                 <select class="form-control" name="type">
-                  <option value="Original">Original</option>
-                  <option value="Pan">Pan</option>
-                  <option value="Original-stuffed">Original-stuffed</option>
-                  <option value="Pan-stuffed">Pan-stuffed</option>
-                  <option value="ThinNcrispy">ThinNcrispy</option>
+                  <option value="Original">Original (+$0.25)</option>
+                  <option value="Pan">Pan (+$0.50)</option>
+                  <option value="Original-stuffed">Original-stuffed (+$0.75)</option>
+                  <option value="Pan-stuffed">Pan-stuffed (+$1.00)</option>
+                  <option value="ThinNcrispy">ThinNcrispy (+$1.25)</option>
               </select>
               <span class="help-block">Please select type of pizza</span>
               </form>
@@ -41,10 +43,10 @@
               <form id="size">
               <label class="control-label" for="size">Size of pizza</label>
                 <select class="form-control" name="size">
-                  <option value="Medium">Medium</option>
-                  <option value="Small">Small</option>
-                  <option value="Large">Large</option>
-                  <option value="Super-large">Super-large</option>
+                  <option value="Medium">Medium (+$6.99)</option>
+                  <option value="Small">Small (+$7.99)</option>
+                  <option value="Large">Large (+$8.99)</option>
+                  <option value="Super-large">Super-large (+$9.99)</option>
                 </select>
             <span class="help-block">Please select a size</span>
             </form>
