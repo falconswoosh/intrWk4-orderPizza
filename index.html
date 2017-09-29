@@ -6,10 +6,10 @@
     <meta name="keywords" content="Order Pizza">
     <meta name="author" content="Alan Falcon">
     <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css" type="text/css" media="all">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css" type="text/css" media="all"> -->
     <link rel="stylesheet" href="css/styles.css" type="text/css" media="all">
     <script src="js/jquery-3.2.1.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script> -->
     <script src="js/scripts.js"></script>
     <title>Order Pizza</title>
   </head>
@@ -24,47 +24,47 @@
     <br>
         <div class="row1">   <!--row1-->
           <div class="col-md-4" id="col1-PizzaType"> <!--Col1-->
-            <div id="typeInput" class="form-group">
-              <form id="type">
-              <label class="control-label" for="type">Type of pizza</label>
-                <select class="form-control" name="type">
-                  <option value="Original">Original (+$0.25)</option>
-                  <option value="Pan">Pan (+$0.50)</option>
-                  <option value="Original-stuffed">Original-stuffed (+$0.75)</option>
-                  <option value="Pan-stuffed">Pan-stuffed (+$1.00)</option>
-                  <option value="ThinNcrispy">ThinNcrispy (+$1.25)</option>
-              </select>
-              <span class="help-block">Please select type of pizza</span>
-              </form>
-            </div>   <!--end of DIV dropdownInput -->
+            <form id="selectType">
+              <div id="selectType" class="form-group">
+                <label class="control-label" for="type"><b>Type of pizza</b></label>
+                  <select id="selectType" class="form-control" name="type">
+                    <option value="Original">Original (+$0.25)</option>
+                    <option value="Pan">Pan (+$0.50)</option>
+                    <option value="Original-stuffed">Original-stuffed (+$0.75)</option>
+                    <option value="Pan-stuffed">Pan-stuffed (+$1.00)</option>
+                    <option value="ThinNcrispy">ThinNcrispy (+$1.25)</option>
+                </select>
+                <span class="help-block"><b>Please select type of pizza</b></span>
+              </div>   <!--end of DIV dropdownInput -->
+          </form>
           </div>   <!--end of row1col1 -->
           <div class="col-md-4" id="col2-PizzaSize"> <!--Col2-->
-            <div id="sizeInput" class="form-group">
-              <form id="size">
-              <label class="control-label" for="size">Size of pizza</label>
-                <select class="form-control" name="size">
+            <div id="selectSize" class="form-group">
+              <form id="selectSize">
+              <label class="control-label" for="size"><b>Size of pizza</b></label>
+                <select id="selectSize" class="form-control" name="size">
                   <option value="Medium">Medium (+$6.99)</option>
                   <option value="Small">Small (+$7.99)</option>
                   <option value="Large">Large (+$8.99)</option>
                   <option value="Super-large">Super-large (+$9.99)</option>
                 </select>
-            <span class="help-block">Please select a size</span>
+            <span class="help-block"><b>Please select a size</b></span>
             </form>
             </div>
           </div>   <!--end of row1col2 -->
           <div class="col-md-4" id="col3-Toppings"> <!--Col3-->
-            <form id="toppings">
-              <div id = "toppingsInput">
-              <label class="control-label" for="toppings">Toppings</label>
-              <input type="checkbox" id="toppings" name="toppings">Cheese
-              <input type="checkbox" id="toppings" name="toppings">Pepperoni
-              <input type="checkbox" id="toppings" name="toppings">Italian Sausage
-              <input type="checkbox" id="toppings" name="toppings">Salami
-              <input type="checkbox" id="toppings" name="toppings">Meatball
-              <input type="checkbox" id="toppings" name="toppings">Ham
-              <input type="checkbox" id="toppings" name="toppings">Bacon
-              <input type="checkbox" id="toppings" name="toppings">Pineapple
-              <button type="submit">Submit</button>
+            <form id="checkboxToppings">
+              <input type="checkbox" id="checkbox" name="toppings" checked>Cheese
+              <input type="checkbox" id="checkbox" name="toppings">Pepperoni
+              <input type="checkbox" id="checkbox" name="toppings">Italian Sausage
+              <input type="checkbox" id="checkbox" name="toppings">Salami
+              <input type="checkbox" id="checkbox" name="toppings">Meatball
+              <input type="checkbox" id="checkbox" name="toppings">Ham
+              <input type="checkbox" id="checkbox" name="toppings">Bacon
+              <input type="checkbox" id="checkbox" name="toppings">Pineapple
+                <div id = "toppingsSubmit">
+                  <button type="submit">Submit</button>
+                  <span class="help-block"><b>Please select your topics</b></span>
                           <!--start of original-->
                 <!-- <select class="form-control" name="toppings">
                   <option value="Cheese">Cheese</option>
@@ -78,6 +78,7 @@
                 </select>
           <span class="help-block">Please select toppings</span> -->
           <!-- <input type="checkbox" id = "toppings" name="toppings"> end of original input -->
+                </div>
               </div>
           </div>   <!--end of row1col3 -->
 
