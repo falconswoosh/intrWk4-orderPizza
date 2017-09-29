@@ -41,8 +41,8 @@ Alan Falcon email: [falconswoosh@gmail.com](falconswoosh@gmail.com)
 
 
 * [CSS](http://ref.openweb.io/CSS/)
-* [CSS Bootstrap](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwjswubPlLnWAhVGVRQKHaRLBkgQFggmMAA&url=https%3A%2F%2Fgetbootstrap.com%2Fcss%2F&usg=AFQjCNFpcAPIPLCu0F7w2NDTOafHdV8Pkw)
-* [CSS/JS Bootstrap: JQuery Plugin For Bootstrap Dropdown With Checkboxes](http://www.jqueryscript.net/form/jQuery-Plugin-For-Bootstrap-Dropdown-Checkboxes-dropdownCheckboxes.html)
+* [CSS: Bootstrap](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwjswubPlLnWAhVGVRQKHaRLBkgQFggmMAA&url=https%3A%2F%2Fgetbootstrap.com%2Fcss%2F&usg=AFQjCNFpcAPIPLCu0F7w2NDTOafHdV8Pkw)
+* [CSS: Materialize](http://materializecss.com/forms.html)
 * [Git](https://gist.github.com/derhuerst/1b15ff4652a867391f03)
 * [GitHub](https://github.com/), [Atom](http://flight-manual.atom.io/getting-started/sections/why-atom/)
 * [HTML](http://htmlreference.io/)
