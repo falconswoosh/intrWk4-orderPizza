@@ -1,5 +1,5 @@
 //Business Interface
-function Pizza (order) {
+function Pizza (type, size, toppings) {
   this.type = ["Original", "Pan", "Original-stuffed","Pan-stuffed", "ThinNcrispy"];
   this.size = ["Small", "Medium", "Large", "Super-large"];
   this.toppings = ["Cheese", "Pepperoni", "Italian Sausage", "Salami", "Meatball", "Ham", "Bacon", "Pineapple"];
@@ -8,15 +8,14 @@ function Pizza (order) {
 //size = ["Small", "Medium", "Large", "Super-large"];
 //toppings = ["Cheese", "Pepperoni", "Italian Sausage", "Salami", "Meatball", "Ham", "Bacon", "Pineapple"];
 
-function Price (cost) {
+function Price (type, size, subTotal, orderTotal) {
   this.typeCost = [0.25, 0.50, 0.75, 1.00, 1.25];
   this.sizeCost = [6.99, 7.99, 8.99, 9.99];
-  // this.toppingsCost = [1.00, 1.25, 1.25, 1.25, 1.25, 1.25, 1.25, 1.00];
   this.subTotal = 0;
   this.orderTotal = 0;
 }
 
-function Customer (Name) {
+function Customer (lastName, firstName, phone, email) {
   this.lastName = "";
   this.firstName = "";
   this.phone = "";
@@ -28,10 +27,16 @@ function Payment (payment) {
   this.cash   = false;
 }
 
-Price.prototype.priceCalc = function () {
-    this.type = new (pizzaType);
+Pizza.prototype.PizzaOrder = function () {
+  var typeIndex = this.type.indexOf(pizzaType);
+  var sizeIndex = this.size.indexOf(pizzaSize);
+};
 
-      // for (index=0; index<)
+Price.prototype.CalcPrice = function () {
+  var typePrice = this.typeCost[typeIndex];
+  var sizePrice = this.sizeCost[sizeIndex];
+  this.subTotal=this.subTotal + typePrice + sizePrice;
+  this.orderTotal=this.orderTotal+this.subTotal;
 };
 
 
@@ -46,7 +51,10 @@ $(function() {
     $("input:checkbox[name=toppings]:checked").each(function() {
         var toppingChoices = $(this).val();
         toppingsResponse.push(toppingChoices);
+    Pizza.PizzaOrder(pizzaType, pizzaSize);
+    Price.CalcPrice(pizzaType, pizzaSize);
 
+  //Output
     $("div#output").show();
 		$("ul#list1").append("<li>"+pizzaType+"</li>");
     $("ul#list1").append("<li>"+pizzaSize+"</li>");
