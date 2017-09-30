@@ -1,12 +1,17 @@
 //Business Interface
-function Pizza (type, size, toppings) {
+function PizzaChoiceArrays (type, size, toppings) {
   this.type = ["Original", "Pan", "Original-stuffed","Pan-stuffed", "ThinNcrispy"];
   this.size = ["Small", "Medium", "Large", "Super-large"];
   this.toppings = ["Cheese", "Pepperoni", "Italian Sausage", "Salami", "Meatball", "Ham", "Bacon", "Pineapple"];
+  //type = ["Original", "Pan", "Original-stuffed","Pan-stuffed", "ThinNcrispy"];
+  //size = ["Small", "Medium", "Large", "Super-large"];
+  //toppings = ["Cheese", "Pepperoni", "Italian Sausage", "Salami", "Meatball", "Ham", "Bacon", "Pineapple"];
 }
-//type = ["Original", "Pan", "Original-stuffed","Pan-stuffed", "ThinNcrispy"];
-//size = ["Small", "Medium", "Large", "Super-large"];
-//toppings = ["Cheese", "Pepperoni", "Italian Sausage", "Salami", "Meatball", "Ham", "Bacon", "Pineapple"];
+// function OrderInput (type, size, toppings) {
+//   this.typeVal = "typeVal";
+//   this.sizeVal = "typeVal";
+//   this.toppingsVal = [];
+// }
 
 function Price (type, size, subTotal, orderTotal) {
   this.typeCost = [0.25, 0.50, 0.75, 1.00, 1.25];
@@ -27,7 +32,7 @@ function Payment (payment) {
   this.cash   = false;
 }
 
-Pizza.prototype.PizzaOrder = function () {
+PizzaChoiceArrays.prototype.PizzaOrder = function () {
   var typeIndex = this.type.indexOf(pizzaType);
   var sizeIndex = this.size.indexOf(pizzaSize);
 };
@@ -37,6 +42,7 @@ Price.prototype.CalcPrice = function () {
   var sizePrice = this.sizeCost[sizeIndex];
   this.subTotal=this.subTotal + typePrice + sizePrice;
   this.orderTotal=this.orderTotal+this.subTotal;
+  return typePrice
 };
 
 
@@ -47,14 +53,22 @@ $(function() {
     event.preventDefault();
     var pizzaType = $("select#selectType").val();
     var pizzaSize = $("select#selectSize").val();
+    var OrderInput = {};
+    OrderInput.typeval = $("select#selectType").val();
+    OrderInput.sizeval = $("select#selectSize").val();
     var toppingsResponse = [];
     $("input:checkbox[name=toppings]:checked").each(function() {
         var toppingChoices = $(this).val();
         toppingsResponse.push(toppingChoices);
-    Pizza.PizzaOrder(pizzaType, pizzaSize);
-    Price.CalcPrice(pizzaType, pizzaSize);
+    });
+  OrderInput.CalcPrice();
+    console.log("the price is: " + typePrice);
+
 
   //Output
+    console.log("Type: " + OrderInput.typeval);
+    console.log("Size: " + OrderInput.typesize);
+    // console.log("Toppings: " + OrderInput.toppingsVal());
     $("div#output").show();
 		$("ul#list1").append("<li>"+pizzaType+"</li>");
     $("ul#list1").append("<li>"+pizzaSize+"</li>");
@@ -71,6 +85,6 @@ $(function() {
     // $("button#clearScreen").click(function() {
     //   location.reload();
     // });
-    });
+
   });
 });
