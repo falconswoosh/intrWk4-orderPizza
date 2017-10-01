@@ -32,7 +32,7 @@ th {
   background-color: yellow;
 }
 td {
-  white-space:pre;
+  /*white-space:pre;*/
   text-align: left;
 }
 #total {

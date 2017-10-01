@@ -40,9 +40,16 @@ $(function() {
   });
   $("form").submit(function(event) {
     event.preventDefault();
-    var inputTypePrice = parseFloat($("select#selectType").val());
-    var inputSizePrice = parseFloat($("select#selectSize").val());
-    var totalIt = inputTypePrice + inputSizePrice;
+    // var inputTypePrice = (parseFloat($("select#selectType").val()).toPrecision(3));
+    // var inputSizePrice = (parseFloat($("select#selectSize").val()).toPrecision(3));
+    // var inputTypePrice = Number(inputTypePrice);
+    // var inputSizePrice = Number(inputSizePrice);
+
+    var inputTypePrice1 = Number($("select#selectType").val());
+    var inputSizePrice1 = Number($("select#selectSize").val());
+    var inputTypePrice = parseFloat(inputTypePrice1).toPrecision(3);
+    var inputSizePrice = parseFloat(inputSizePrice1).toPrecision(3);
+    totalIt = inputTypePrice1 + inputSizePrice1;
     var inputType = $("select#selectType>option:selected").text();
     var inputSize = $("select#selectSize>option:selected").text();
     var extractTypeName = inputType.indexOf("(");
@@ -54,13 +61,6 @@ $(function() {
       var toppingChoices = $(this).val();
       toppingsResponse.push(toppingChoices);
     });
-
-    // console.log("inputType: " + inputTypeName + " Price: " + inputTypePrice);
-    // console.log("inputSize: " + inputSizeName + " Price: " + inputSizePrice);
-    // console.log("inputToppings: " + toppingsResponse);
-    // var index = Price.Indices();
-    console.log(typeof inputTypePrice);
-    console.log(typeof inputSizePrice);
 
   //Output
     $("div#output1").show();
