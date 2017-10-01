@@ -6,7 +6,7 @@ var toppingsArr=["Cheese", "Pepperoni", "Italian Sausage", "Salami", "Meatball",
 function Selections (type, size, toppings) {
   this.type = type;
   this.size = size;
-  this.toppings = toppings;
+  this.toppings = [];
 }
 
 function Price (subTotal, orderTotal) {
@@ -28,31 +28,22 @@ function Payment (payment) {
   this.cash   = false;
 }
 
-// InputBase.prototype.Indices = function () {
-//   var typeIndex = this.type.indexOf(pizzaType);
-//   var sizeIndex = this.size.indexOf(pizzaSize);
-//   alert("Type-Index: " + typeIndex);
-//   alert("Type-Size: " + sizeIndex);
-// };
-
-// PizzaChoiceArrays.prototype.OrderType = function () {
-//   var typeIndex = this.type.indexOf(pizzaType);
-//   return typeIndex
-// };
-//
-// PizzaChoiceArrays.prototype.OrderSize = function () {
-//   var sizeIndex = this.size.indexOf(pizzaSize);
-//   return sizeIndex
-// };
-
-// Price.prototype.CalcPrice = function () {
-//   var typePrice = this.typeCost[typeIndex];
-//   var sizePrice = this.sizeCost[sizeIndex];
-//   this.subTotal=this.subTotal + typePrice + sizePrice;
-//   this.orderTotal=this.orderTotal+this.subTotal;
-//   return typePrice
-// };
-
+Price.prototype.Index = function () {
+  var typeIndex = Selections.type.indexOf(inputType);
+  var sizeIndex = Selections.size.indexOf(inputSize);
+  for (index=0; index=typeIndex; index++) {
+    if (typeArr === typeIndex) {
+      costOfType = Price.typeCost[index];
+      alert("Type-Price is: " + costOfType);
+    }
+  }
+  for (index=0; index=typeIndex; index++) {
+    if (sizeArr === sizeIndex) {
+      costOfSize = Price.sizeCost[index];
+      alert("Size-Price is: " + costOfSize);
+    }
+  }
+};
 
 
 //User Interface
@@ -66,34 +57,18 @@ $(function() {
     var inputType = $("select#selectType").val();
     var inputSize = $("select#selectSize").val();
     var toppingsResponse = [];
-    var inputToppings = $("input:checkbox[name=toppings]:checked").each(function() {
-      toppingsResponse.push($(this).val());
+    $("input:checkbox[name=toppings]:checked").each(function() {
+      var toppingChoices = $(this).val();
+      toppingsResponse.push(toppingChoices);
     });
-    var input = new Selections(inputType, inputSize);
+
     console.log("inputType: " + inputType);
     console.log("inputSize: " + inputSize);
-    console.log("inputToppings: " + inputToppings);
+    console.log("inputToppings: " + toppingsResponse);
+    // var index = Price.Indices();
 
-    // var input = (($("select#selectType").val()),($("select#selectType").val()))
-    // input.Indices();
 
-    var toppingsResponse = [];
-    $("input:checkbox[name=toppings]:checked").each(function() {
-        var toppingChoices = $(this).val();
-        toppingsResponse.push(toppingChoices);
-    });
-
-    // Reset dropdowns and checkboxes to default
-    // $("clear").click(function(event) {
-    //   event.preventDefault();
-    //   $("form#checkbox1").show();
-  	// 	$("ul#list1").append("<li>"+inputType+"</li>");
-    // });
-    //
   //Output
-    // console.log("Type: " + OrderInput.typeval);
-    // console.log("Size: " + OrderInput.typesize);
-    // console.log("Toppings: " + OrderInput.toppingsVal());
     $("div#output").show();
 		$("ul#list1").append("<li>"+inputType+"</li>");
     $("ul#list1").append("<li>"+inputSize+"</li>");
@@ -102,14 +77,9 @@ $(function() {
         $("ul#list2").append("<li>"+toppingChoices+"</li>");
     });
 
-//Diplay 'error' only if number is <= 0 or a whole number
-    // $(".help-inline").text(validNumberCheck(number));
-    // $(".help-inline").css("background-color", "cyan");
-
-//Clear output - this is the Reset button
+  //Clear output - this is the Reset button
     $("button#clearScreen").click(function() {
       location.reload();
     });
-
   });
 });
