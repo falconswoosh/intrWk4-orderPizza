@@ -19,9 +19,7 @@
     <div class="container">
       <form>
       <h1>Welcome to ePizza!</h1>
-      <h6>*Our pizzas are so good that seeing just the pictures online makes your mouth water..."</h6>
-    <br>
-    <br>
+      <h6>*Our pizzas are so good that seeing just the pictures online makes your mouth water..."</h6><br><br>
         <div class="row1">   <!--row1-->
           <div class="col-md-4" id="col1-PizzaType"> <!--Col1-->
             <form id="selectType">
@@ -33,8 +31,7 @@
                     <option value="Original-stuffed">Original-stuffed (+$0.75)</option>
                     <option value="Pan-stuffed">Pan-stuffed (+$1.00)</option>
                     <option value="ThinNcrispy">ThinNcrispy (+$1.25)</option>
-                </select>
-                <br>
+                </select><br>
                 <span class="help-block"><b>Please select type of pizza</b></span>
               </div>   <!--end of DIV dropdownInput -->
           </form>
@@ -48,8 +45,7 @@
                   <option value="Small">Small (+$7.99)</option>
                   <option value="Large">Large (+$8.99)</option>
                   <option value="Super-large">Super-large (+$9.99)</option>
-                </select>
-                <br>
+                </select><br>
             <span class="help-block"><b>Please select a size</b></span>
             </form>
             </div>
@@ -58,7 +54,7 @@
             <form id="checkboxToppings">
               <div class="form-group">
               <label class="control-label" for="toppings"><b>Toppings on Pizza</b></label><br>
-                <input type="checkbox" id="checkbox1" name="toppings" checked value="Cheese">Cheese
+                <input type="checkbox" id="checkbox1" name="toppings" checked value="Cheese" onclick="return false;">Cheese
                 <input type="checkbox" id="checkbox2" name="toppings" value="Pepperoni">Pepperoni
                 <input type="checkbox" id="checkbox3" name="toppings" value="Italian Sausage">Italian Sausage
                 <input type="checkbox" id="checkbox4" name="toppings" value="Salami">Salami<br>
@@ -66,13 +62,19 @@
                 <input type="checkbox" id="checkbox6" name="toppings" value="Ham">Ham
                 <input type="checkbox" id="checkbox7" name="toppings" value="Bacon">Bacon
                 <input type="checkbox" id="checkbox8" name="toppings" value="Pineapple">Pineapple<br><br>
+
                 <span class="help-block"><b>Please select your toppings</b></span>
               </div>   <!--end of row1col3-form-group -->
-            </form>
-              <br>
+            </form><br>
             </div>   <!--end of row1col3 -->
         <div class="">
-          <button type="submit" name="submit">Submit</button>
+          <button type="submit" class="btn btn-success" name="submit">Submit</button><br><br>
+        </div>
+      </form>
+      <form>
+        <div class = "controls">
+        <span class="help-inline"></span>
+        <button id="clearScreen" class="btn btn-danger" type="click">Reset</button>
         </div>
       </form>
       <div class = "col-md-12" id="output1">
