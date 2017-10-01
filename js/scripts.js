@@ -42,6 +42,7 @@ $(function() {
     event.preventDefault();
     var inputTypePrice = parseFloat($("select#selectType").val());
     var inputSizePrice = parseFloat($("select#selectSize").val());
+    var totalIt = inputTypePrice + inputSizePrice;
     var inputType = $("select#selectType>option:selected").text();
     var inputSize = $("select#selectSize>option:selected").text();
     var extractTypeName = inputType.indexOf("(");
@@ -54,24 +55,42 @@ $(function() {
       toppingsResponse.push(toppingChoices);
     });
 
-    console.log("inputType: " + inputTypeName + " Price: " + inputTypePrice);
-    console.log("inputSize: " + inputSizeName + " Price: " + inputSizePrice);
-    console.log("inputToppings: " + toppingsResponse);
+    // console.log("inputType: " + inputTypeName + " Price: " + inputTypePrice);
+    // console.log("inputSize: " + inputSizeName + " Price: " + inputSizePrice);
+    // console.log("inputToppings: " + toppingsResponse);
     // var index = Price.Indices();
-
+    console.log(typeof inputTypePrice);
+    console.log(typeof inputSizePrice);
 
   //Output
-    $("div#output").show();
-		$("ul#list1").append("<li>"+inputTypePrice+"</li>");
-    $("ul#list1").append("<li>"+inputSizePrice+"</li>");
-    $("input:checkbox[name=toppings]:checked").each(function() {
-        var toppingChoices = $(this).val();
-        $("ul#list2").append("<li>"+toppingChoices+"</li>");
-    });
+    $("div#output1").show();
+	  $("tr#list1").append("<th class='tableHead'>Items</th>");
+	  $("tr#list1").append("<th class='tableHead'>Selections</th>");
+    $("tr#list1").append("<th class='tableHead'>Price</th>");
 
+    $("tr#list2").append("<td><b>Type:</b></td>");
+    $("tr#list2").append("<td>"+inputTypeName+"</td>");
+    $("tr#list2").append("<td>$"+inputTypePrice+"</td>");
+
+
+	  $("tr#list3").append("<td><b>Size:</b></td>");
+    $("tr#list3").append("<td>"+inputSizeName+"</td>");
+    $("tr#list3").append("<td>$"+inputSizePrice+"</td>");
+
+	  $("tr#list4").append("<td><b>Toppings:</b></td>");
+    // $("input:checkbox[name=toppings]:checked").each(function() {
+    //   var toppingChoices = $(this).val();
+      $("tr#list4").append("<td>"+toppingsResponse+"</td>");
+    // });
+    $("tr#list4").append("<td>Included</td>");
+
+	  $("tr#list5").append("<td id='total'><b>TOTAL PRICE:</b></td>");
+	  $("tr#list5").append("<td></td>");
+    $("tr#list5").append("<td><b>$"+totalIt+"</b></td>");
   //Clear output - this is the Reset button
     $("button#clearScreen").click(function() {
       location.reload();
+      var x = 0;
     });
   });
 });

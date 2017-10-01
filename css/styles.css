@@ -1,6 +1,40 @@
 body {
   text-align: center;
 }
-/*#col1-PizzaType {
-    text-align: center;
-}*/
+#warning1 {
+  color: red;
+  font-weight: 400;
+  text-decoration: underline;
+}
+#warning2 {
+  font-weight: 200;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  align-content: center;
+  align-items: flex-end;
+  table-layout: auto;
+}
+table {
+  border: 2px solid black;
+}
+#tableTitle {
+  font-size: 20px;
+}
+th, td {
+  border: 1px solid black;
+}
+th {
+  text-align: center;
+}
+.tableHead {
+  background-color: yellow;
+}
+td {
+  white-space:pre;
+  text-align: left;
+}
+#total {
+  text-align: center;
+}

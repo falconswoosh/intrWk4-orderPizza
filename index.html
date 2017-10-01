@@ -41,8 +41,8 @@
               <form id="selectSize">
               <label class="control-label" for="size"><b>Size of pizza</b></label>
                 <select id="selectSize" class="form-control" name="size">
-                  <option value="7.99">Medium (+$6.99)</option>
-                  <option value="6.99">Small (+$7.99)</option>
+                  <option value="7.99">Medium (+$7.99)</option>
+                  <option value="6.99">Small (+$6.99)</option>
                   <option value="8.99">Large (+$8.99)</option>
                   <option value="9.99">Super-large (+$9.99)</option>
                 </select><br>
@@ -67,19 +67,32 @@
             </form><br>
             </div>   <!--end of row1col3 -->
         <div class="">
-          <button type="submit" class="btn btn-success" name="submit">Submit</button><br><br>
+          <button id="clearScreen" class="btn btn-warning" type="click">Reset</button><br><br>
         </div>
       </form>
       <form>
         <div class = "controls">
         <span class="help-inline"></span>
-        <button id="clearScreen" class="btn btn-warning" type="click">Reset</button>
+        <button type="submit" class="btn btn-success" name="submit">Continue</button><br><br>
         </div>
-      </form>
+        <span id="warning1" for ="btn btn-success">Warning</span><span id="warning2">: Clicking <em>'Continue'</em> will commit the most recent Selections to your order.</span>
+      </form><br><br>
       <div class = "col-md-12" id="output1">
-        <ul id="list1">
-
-        </ul>
+        <span id="tableTitle"><b>ePizza Order Confirmation</b></span>
+        <table id="list">
+          <tr id="list1">
+          </tr>
+          <tr id="list2">
+          </tr>
+          <tr id="list3">
+          </tr>
+          <tr id="list4">
+          </tr>
+          <tr id="list5">
+          </tr>
+        </table>
+        <!-- <ul id="list1">
+        </ul> -->
       </div> <!--end of output1 -->
       <div class = "col-md-12" id="output2">
         <ul id="list2">
