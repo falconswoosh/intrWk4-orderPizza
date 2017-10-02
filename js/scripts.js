@@ -90,7 +90,6 @@ $(function() {
   //Clear output - this is the Reset button
     $("button#clearScreen").click(function() {
       location.reload();
-      var x = 0;
     });
   });
 });
