@@ -41,3 +41,26 @@ td {
 #total {
   text-align: center;
 }
+#hiddenCheckbox {
+  position: relative;
+  width:300px;
+}
+.title {
+  position:absolute;
+  vertical-align:top;
+  left:20%;
+  margin-left:-20px;
+  margin-top: -10px;
+  right:0;
+  top:50%;
+  bottom:0;
+  font-size: 12px;
+  color: red;
+  display:none;
+}
+#hiddenCheckbox:hover .title {
+  display:block;
+}
+input.hiddenbox {
+    visibility: hidden;
+}

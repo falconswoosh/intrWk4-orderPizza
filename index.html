@@ -64,6 +64,12 @@
                 <input type="checkbox" id="checkbox8" name="toppings" value="Pineapple">Pineapple<br><br>
                 <span class="help-block"><b>Please select your toppings</b></span>
               </div>   <!--end of row1col3-form-group -->
+              <div id="hiddenCheckbox" class = "hover">
+                <p class="title">Cheese is required for all pizza orders.<br> After all, a pizza isn't a pizza without cheese !<br>If you do not desire a cheese-only pizza, please do<br> select additional toppings for your pizza...</p>
+              <label class="hiddenCheckbox" id="hiddenCheckboxes" for="hideIt"><b></b></label>
+                <input type="checkbox" name = "hideIt" class="hiddenbox" id="checkbox00">
+                <input type="checkbox" name = "hideIt" class="hiddenbox" id="checkbox01">
+              </div>
             </form><br>
             </div>   <!--end of row1col3 -->
         <div class="">
@@ -75,10 +81,11 @@
         <span class="help-inline"></span>
         <button type="submit" id = "btnSubmit" class="btn btn-success" name="submit">Continue</button><br><br>
         </div>
-        <span id="warning1" for ="btn btn-success">Warning</span><span id="warning2">: Clicking <em>'Continue'</em> will commit the most recent Selections to your order.</span>
+        <span id="warning1" for ="btn btn-success">Warning</span><span id="warning2">: Click <em>'Continue'</em> only once. Doing so will commit your most recent Selections to your order.</span><br>
+        <span for ="btn btn-success">Otherwise, </span><span> Click <em>'Reset'</em> to start over.</span>
       </form><br><br>
       <div class = "col-md-12" id="output1">
-        <span id="tableTitle"><b>ePizza Order Confirmation</b></span>
+        <span id="tableTitle"><b>ePizza Order Confirmation</b></span><br>
         <table id="list">
           <tr id="list1">
           </tr>
