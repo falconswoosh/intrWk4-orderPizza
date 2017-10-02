@@ -1,17 +1,35 @@
 //Business Interface
+// var typeArr=["Original", "Pan", "Original-stuffed","Pan-stuffed", "ThinNcrispy"];
+// var sizeArr=["Small", "Medium", "Large", "Super-large"];
+// var toppingsArr=["Cheese", "Pepperoni", "Italian Sausage", "Salami", "Meatball", "Ham", "Bacon", "Pineapple"];
+// var inputTypeVal = $("select#selectType>option:selected").val(); //another way of getting value from a select/option input
+// this.typeCost = [0.25, 0.50, 0.75, 1.00, 1.25];
+// this.sizeCost = [6.99, 7.99, 8.99, 9.99];
 
-function Pizza (type, size, toppings) {
+function Selections (type, size, toppings) {
   this.type = type;
   this.size = size;
-  this.toppings = toppings;
+  this.toppings = [];
 }
 
-Pizza.prototype.totalPrice = function() {
-  var inputTypePrice1 = Number($("select#selectType").val());
-  var inputSizePrice1 = Number($("select#selectSize").val());
-  var totalPrice = inputTypePrice1 + inputSizePrice1;
-  return totalPrice;
-};
+function Price (subTotal, orderTotal) {
+  this.subTotal = 0;
+  this.orderTotal = 0;
+
+}
+
+function Customer (lastName, firstName, phone, email) {
+  this.lastName = lastName;
+  this.firstName = firstName;
+  this.phone = phone;
+  this.email = email;
+}
+
+function Payment (payment) {
+  subTotal = inputTypePrice + inputSizePrice;
+  this.credit = ["Visa", "Mastercard", "Debit"];
+  this.cash   = false;
+}
 
 
 //User Interface
@@ -26,20 +44,21 @@ $(function() {
 
     var inputTypePrice1 = Number($("select#selectType").val());
     var inputSizePrice1 = Number($("select#selectSize").val());
+    var inputTypePrice = parseFloat(inputTypePrice1).toFixed(2);
+    var inputSizePrice = parseFloat(inputSizePrice1).toFixed(2);
+    totalIt = inputTypePrice1 + inputSizePrice1;
     var inputType = $("select#selectType>option:selected").text();
     var inputSize = $("select#selectSize>option:selected").text();
     var extractTypeName = inputType.indexOf("(");
     var extractSizeName = inputSize.indexOf("(");
     var inputTypeName = inputType.substr(0,extractTypeName-1);
     var inputSizeName = inputSize.substr(0,extractSizeName-1);
-    var inputTypePrice = parseFloat(inputTypePrice1).toFixed(2);
-    var inputSizePrice = parseFloat(inputSizePrice1).toFixed(2);
     var toppingsResponse = [];
     $("input:checkbox[name=toppings]:checked").each(function() {
       var toppingChoices = $(this).val();
       toppingsResponse.push(toppingChoices);
     });
-    var newOrder = new Pizza(inputTypeName, inputSizeName);
+
 
   //Output
     $("div#output1").show();
@@ -61,11 +80,12 @@ $(function() {
 
 	  $("tr#list5").append("<td id='total'><b>TOTAL PRICE:</b></td>");
 	  $("tr#list5").append("<td></td>");
-    $("tr#list5").append("<td><b>$"+newOrder.totalPrice()+"</b></td>");
+    $("tr#list5").append("<td><b>$"+totalIt+"</b></td>");
 
     $("form").submit(function(event) {
     $('#btnSubmit').prop('disabled',true);
     alert('INVALID Response. This form will reset for you to try again. You are not allowed to click "Continue" twice or click "Reset" after already committing via the "Continue" button.');
+    // this.submit();
     location.reload();
     });
     //Clear output - this is the Reset button

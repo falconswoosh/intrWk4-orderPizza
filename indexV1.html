@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="A site for ordering pizza. ">
+    <meta name="keywords" content="Order Pizza">
+    <meta name="author" content="Alan Falcon">
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css" type="text/css" media="all"> -->
+    <link rel="stylesheet" href="css/styles.css" type="text/css" media="all">
+    <script src="js/jquery-3.2.1.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script> -->
+    <script src="js/scripts.js"></script>
+    <title>Order Pizza</title>
+  </head>
+  <body>
+    <div class="page">
+    </div>
+    <div class="container">
+      <form id = "pizzaForm">
+      <h1>Welcome to ePizza!</h1>
+      <h6>*Our pizzas are so good that seeing just the <a href="img/pizza1.jpg">pictures</a> online makes your mouth water..."</h6><br><br>
+        <div class="row1">   <!--row1-->
+          <div class="col-md-4" id="col1-PizzaType"> <!--Col1-->
+            <form id="selectType">
+              <div id="selectType" class="form-group">
+                <label class="control-label" for="type"><b>Type of pizza</b></label>
+                  <select id="selectType" class="form-control" name="type">
+                    <option value="0.25">Original (+$0.25)</option>
+                    <option value="0.50">Pan (+$0.50)</option>
+                    <option value="0.75">Original-stuffed (+$0.75)</option>
+                    <option value="1.00">Pan-stuffed (+$1.00)</option>
+                    <option value="1.25">ThinNcrispy (+$1.25)</option>
+                </select><br>
+                <span class="help-block"><b>Please select a type</b></span>
+              </div>   <!--end of DIV dropdownInput -->
+          </form>
+          </div>   <!--end of row1col1 -->
+          <div class="col-md-4" id="col2-PizzaSize"> <!--Col2-->
+            <div id="selectSize" class="form-group">
+              <form id="selectSize">
+              <label class="control-label" for="size"><b>Size of pizza</b></label>
+                <select id="selectSize" class="form-control" name="size">
+                  <option value="7.99">Medium (+$7.99)</option>
+                  <option value="6.99">Small (+$6.99)</option>
+                  <option value="8.99">Large (+$8.99)</option>
+                  <option value="9.99">Super-large (+$9.99)</option>
+                </select><br>
+            <span class="help-block"><b>Please select a size</b></span>
+            </form>
+            </div>
+          </div>   <!--end of row1col2 -->
+          <div class="col-md-4" id="col3-Toppings"> <!--Col3-->
+            <form id="checkboxToppings">
+              <div class="form-group">
+              <label class="control-label" for="toppings"><b>Toppings on Pizza</b></label><br>
+                <input type="checkbox" id="checkbox1" name="toppings" checked value="Cheese" onclick="return false;">Cheese
+                <input type="checkbox" id="checkbox2" name="toppings" value="Pepperoni">Pepperoni
+                <input type="checkbox" id="checkbox3" name="toppings" value="Italian Sausage">Italian Sausage
+                <input type="checkbox" id="checkbox4" name="toppings" value="Salami">Salami<br>
+                <input type="checkbox" id="checkbox5" name="toppings" value="Meatball">Meatball
+                <input type="checkbox" id="checkbox6" name="toppings" value="Ham">Ham
+                <input type="checkbox" id="checkbox7" name="toppings" value="Bacon">Bacon
+                <input type="checkbox" id="checkbox8" name="toppings" value="Pineapple">Pineapple<br><br>
+                <span class="help-block"><b>Please select your toppings</b></span>
+              </div>   <!--end of row1col3-form-group -->
+              <div id="hiddenCheckbox" class = "hover">
+                <p class="title">Cheese is required for all pizza orders.<br> After all, a pizza isn't a pizza without cheese !<br>If you do not desire a cheese-only pizza, please do<br> select additional toppings for your pizza...</p>
+              <label class="hiddenCheckbox" id="hiddenCheckboxes" for="hideIt"><b></b></label>
+                <input type="checkbox" name = "hideIt" class="hiddenbox" id="checkbox00">
+                <input type="checkbox" name = "hideIt" class="hiddenbox" id="checkbox01">
+              </div>
+            </form><br>
+            </div>   <!--end of row1col3 -->
+        <div class="">
+          <button id="clearScreen" class="btn btn-warning" type="click">Reset</button><br><br>
+        </div>
+      </form>
+      <form>
+        <div class = "controls">
+        <span class="help-inline"></span>
+        <button type="submit" id = "btnSubmit" class="btn btn-success" name="submit">Continue</button><br><br>
+        </div>
+        <span id="warning1" for ="btn btn-success">Warning</span><span id="warning2">: Click <em>'Continue'</em> only once. Doing so will commit your most recent Selections to your order.</span><br>
+        <span for ="btn btn-success">Otherwise, </span><span> Click <em>'Reset'</em> to start over.</span>
+      </form><br><br>
+      <div class = "col-md-12" id="output1">
+        <span id="tableTitle"><b>ePizza Order Confirmation</b></span><br>
+        <table id="list">
+          <tr id="list1">
+          </tr>
+          <tr id="list2">
+          </tr>
+          <tr id="list3">
+          </tr>
+          <tr id="list4">
+          </tr>
+          <tr id="list5">
+          </tr>
+        </table>
+        <!-- <ul id="list1">
+        </ul> -->
+      </div> <!--end of output1 -->
+      <div class = "col-md-12" id="output2">
+        <ul id="list2">
+
+        </ul>
+      </div> <!--end of output2 -->
+    </div> <!--end of container -->
+  </body>
+</html>
