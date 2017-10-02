@@ -40,15 +40,10 @@ $(function() {
   });
   $("form").submit(function(event) {
     event.preventDefault();
-    // var inputTypePrice = (parseFloat($("select#selectType").val()).toPrecision(3));
-    // var inputSizePrice = (parseFloat($("select#selectSize").val()).toPrecision(3));
-    // var inputTypePrice = Number(inputTypePrice);
-    // var inputSizePrice = Number(inputSizePrice);
-
     var inputTypePrice1 = Number($("select#selectType").val());
     var inputSizePrice1 = Number($("select#selectSize").val());
-    var inputTypePrice = parseFloat(inputTypePrice1).toPrecision(3);
-    var inputSizePrice = parseFloat(inputSizePrice1).toPrecision(3);
+    var inputTypePrice = parseFloat(inputTypePrice1).toFixed(2);
+    var inputSizePrice = parseFloat(inputSizePrice1).toFixed(2);
     totalIt = inputTypePrice1 + inputSizePrice1;
     var inputType = $("select#selectType>option:selected").text();
     var inputSize = $("select#selectSize>option:selected").text();
@@ -78,9 +73,7 @@ $(function() {
     $("tr#list3").append("<td>$"+inputSizePrice+"</td>");
 
 	  $("tr#list4").append("<td><b>Toppings:</b></td>");
-    // $("input:checkbox[name=toppings]:checked").each(function() {
-    //   var toppingChoices = $(this).val();
-      $("tr#list4").append("<td>"+toppingsResponse+"</td>");
+    $("tr#list4").append("<td>"+toppingsResponse+"</td>");
     // });
     $("tr#list4").append("<td>Included</td>");
 
