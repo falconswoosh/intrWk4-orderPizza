@@ -28,9 +28,7 @@ This website is our forth project for the Introduction to Programming. A site fo
 | may finalize their selections where total price displays | various selections are made via dropdowns and checkboxes and the user finalizes their selection by clicking the "Continue" button | ...Total Price $8.24|
 | include a reset button to clear selections and start fresh | selections are chosen, "Reset" is clicked | display area is cleared returning to the default state |
 | include a continue button to allow the user to continue to the next step | clicking on "Continue" | a confirmation is displayed noting the selections made and the total price |
-| include a persistent warning on use of the reset and the continue buttons | N/A | Warning: Click 'Continue' only once. Doing so will commit your most recent Selections to your order. Otherwise, Click 'Reset' to start over.
 | include a hidden tip for further user information related to topping choices | NOTE: the tip is blank until a mouse hovers in an area below "Please select your toppings" | Cheese is required for all pizza orders. After all, a pizza isn't a pizza without cheese ! If you do not desire a cheese-only pizza, please do select additional toppings for your pizza...|
-| include error traps such as disallow clicking the "Continue" button more than once, breaking out of the order allowing a committed order to remain, and to keep the user from unchecking the one required topping - cheese. | user clicks "Continue" more than once in a row | INVALID Response. This form will reset for you to try again. You are not allowed to click "Continue" twice or click "Reset" after already committing via the "Continue" button.|
 
 
 ## Known Bugs
