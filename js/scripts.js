@@ -1,28 +1,27 @@
 //Business Interface
 
-function Pizza (type, size, toppings) {
+function Pizza (type, size, typePrice, sizePrice, toppings) {
   this.type = type;
   this.size = size;
+  this.typePrice = typePrice;
+  this.sizePrice = sizePrice;
   this.toppings = toppings;
 }
 
 Pizza.prototype.totalPrice = function() {
-  var inputTypePrice1 = Number($("select#selectType").val());
-  var inputSizePrice1 = Number($("select#selectSize").val());
-  var totalPrice = inputTypePrice1 + inputSizePrice1;
+  var totalPrice = this.typePrice + this.sizePrice;
   return totalPrice;
 };
 
-
 //User Interface
 $(function() {
-  $( "input[type='checkbox']" ).prop( "unchecked", true );
-  $("button#clearScreen").click(function() {
-    location.reload();
-  });
-
-    $("form").submit(function(event) {
+  // $( "input[type='checkbox']" ).prop( "unchecked", true );
+  // $("select#selectType").val("0.25");
+  // $("select#selectSize").val("7.99");
+  $("form").submit(function(event) {
     event.preventDefault();
+    // $("table#list").empty(); // wrong level in the table!
+     $("tr").empty(); //this works instead
 
     var inputTypePrice1 = Number($("select#selectType").val());
     var inputSizePrice1 = Number($("select#selectSize").val());
@@ -39,7 +38,8 @@ $(function() {
       var toppingChoices = $(this).val();
       toppingsResponse.push(toppingChoices);
     });
-    var newOrder = new Pizza(inputTypeName, inputSizeName);
+    var newOrder = new Pizza(inputTypeName, inputSizeName, inputTypePrice1, inputSizePrice1, toppingsResponse);
+
 
   //Output
     $("div#output1").show();
@@ -56,6 +56,7 @@ $(function() {
     $("tr#list3").append("<td>$"+inputSizePrice+"</td>");
 
 	  $("tr#list4").append("<td><b>Toppings:</b></td>");
+    // $("tr#list4").append("<td>"+toppingsResponse+"</td>");
     $("tr#list4").append("<td>"+toppingsResponse+"</td>");
     $("tr#list4").append("<td>Included</td>");
 
@@ -63,14 +64,9 @@ $(function() {
 	  $("tr#list5").append("<td></td>");
     $("tr#list5").append("<td><b>$"+newOrder.totalPrice()+"</b></td>");
 
-    $("form").submit(function(event) {
-    $('#btnSubmit').prop('disabled',true);
-    alert('INVALID Response. This form will reset for you to try again. You are not allowed to click "Continue" twice or click "Reset" after already committing via the "Continue" button.');
+  });
+  //Clear output - this is the Reset button
+  $("button#clearScreen").click(function() {
     location.reload();
-    });
-    //Clear output - this is the Reset button
-    $("button#clearScreen").click(function() {
-      location.reload();
-    });
   });
 });
